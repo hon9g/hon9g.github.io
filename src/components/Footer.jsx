@@ -2,8 +2,12 @@ import React from "react"
 import { css, keyframes } from "@emotion/core"
 import { Link, StaticQuery, graphql } from "gatsby"
 
+import GitIcon from "./GitIcon"
+import HomeIcon from "./HomeIcon"
+import MailIcon from "./MailIcon"
+
 const userInfo = ['github', 'email']
-const emoji = new Map([['github', '🐱'], ['email', '✉️']])
+const icon = new Map([['home', <HomeIcon />], ['github', <GitIcon />], ['email', <MailIcon />]])
 const prefix = new Map([['github', 'https://github.com/'], ['email', 'mailto:']])
 
 const fadeIn = keyframes`
@@ -31,7 +35,7 @@ const slideIn = keyframes`
 `
 
 const buttonStyle = css`
-  margin: 0.5rem
+  margin: 0.5rem 0;
   display: block;
   height 2rem;
   color: #4c4b56;
@@ -78,12 +82,12 @@ export default () => (
             `}
           >
             <Link to={'/'} css={buttonStyle}>
-                <span role="img" aria-label="go to home">🏠</span>
+                <span role="img" aria-label="home icon">{icon.get('home')}</span>
                 <div>home</div>
             </Link>
             {userInfo.filter(e => user[e]).map((e, i) => (
               <a key={i} href={`${prefix.get(e)}${user[e]}`} target="_blank" rel="noopener noreferrer" css={buttonStyle}>
-                <span role="img" aria-label={`${e} emoji`}>{emoji.get(e)}</span>
+                <span role="img" aria-label={`${e} icon`}>{icon.get(e)}</span>
                 <div>{e}</div>
               </a>
             ))}
