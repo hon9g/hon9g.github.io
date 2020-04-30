@@ -1,0 +1,22 @@
+@import './code.scss';
+
+body {
+  -webkit-text-size-adjust: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+th, td {
+  text-align: center;
+}
+
+mark {
+  padding: 0.2rem;
+  background-color: #FFC300;
+}
+
+@media only screen and (max-width: 400) {
+  .omit {
+    display: none;
+  }
+}

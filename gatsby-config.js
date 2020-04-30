@@ -18,13 +18,19 @@ module.exports = {
   },
   pathPrefix: `/blog`,
   plugins: [
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-prismjs`],
       },
     },
     {

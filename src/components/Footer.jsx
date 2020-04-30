@@ -70,7 +70,7 @@ export default () => (
             width: 100%;
             text-align: center;
           `}
-        >
+        > 
           <div
             css={css`
               display: flex;
