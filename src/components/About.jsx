@@ -2,7 +2,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
 
-const basicColor = css`color: #4c4b56;`
 const keywordColor = css`color: #cb4b16;`
 const variableColor = css`color: #6c71c4;`
 const stringColor = css`color: #d80;`
@@ -45,7 +44,7 @@ export default () => (
             src={data.site.siteMetadata.user.photo}/>
           : ''
       }
-      <div css={css`margin: auto 0.2rem; ${basicColor}`}>
+      <div css={css`margin: auto 0.2rem; color: inherit;`}>
         <h1
           css={css`
             margin:auto;
