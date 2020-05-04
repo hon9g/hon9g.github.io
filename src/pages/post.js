@@ -8,31 +8,19 @@ export default ({data}) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <div
-        css={css`
-        display:flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        height: 100%;
+      <h1 css={css`
+        margin: 0;
         `}
       >
-        <h1 css={css`
+        {post.frontmatter.title}
+      </h1>
+      <div
+        css={css`
           margin: 0;
-          `}
-        >
-          {post.frontmatter.title}
-        </h1>
-        <div
-          css={css`
-            margin: 0;
-            padding: 0 1rem;
-            max-height: 70vh;
-            overflow-y: scroll;
-          `}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-      </div>
+          padding: 0 1rem;
+        `}
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </Layout>
   )
 }
