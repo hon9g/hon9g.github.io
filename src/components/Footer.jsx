@@ -16,11 +16,11 @@ const fadeIn = keyframes`
     opacity: 0;
   }
   1% {
-    max-height: 0.1rem;
+    max-height: .1em;
     opacity: 0;
   }
   100% {
-    max-height: 1.3rem;
+    max-height: 1em;
     opacity: 1;
   }
 `
@@ -35,14 +35,14 @@ const slideIn = keyframes`
 `
 
 const buttonStyle = css`
-  margin: 0.5rem 0;
+  margin: .5em 0;
   display: block;
-  height 2rem;
+  height 1em;
   color: #4c4b56;
   font-weight: bold;
   background-image: none;
   div {
-    margin-top: -0.3rem;
+    margin-top: -.5em;
     max-height: 0;
     overflow: hidden;
   }

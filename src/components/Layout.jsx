@@ -11,7 +11,7 @@ export default ({children}) => (
         margin: 0 auto;
         height: 100vh;
         max-width: 700px;
-        padding: 1.5rem 1rem 1rem 1rem;
+        padding: 0 1em;
         color: #4c4b56;
     `}
   >

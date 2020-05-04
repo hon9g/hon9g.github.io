@@ -7,15 +7,8 @@ title: "Styles of Mark down"
 - this is **strong**.
 - this is *italic*.
 - this is <mark>mark</mark>.
-- 이건 한글입니다.
-
 > this is a blockquote
-
-# heading 1
-## heading 2
-### heading 3
-#### heading 4
-##### heading 5
+- 이건 한글입니다.
 
 ### source code
 - this is `inline code`
@@ -39,3 +32,7 @@ console.log(isEven(year)) //expected true
 |a|b|c|
 |:---:|:---:|:---:|
 |1|2|3|
+
+# heading 1
+## heading 2
+### heading 3

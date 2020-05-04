@@ -6,34 +6,33 @@ export default ({slug, title, date, excerpt}) => (
   <Link
     to={slug}
     css={css`
-        margin: 0 1rem;
+        margin: 0 1em;
         text-decoration: none;
         color: inherit;
     `}
   >
-    <h2
+    <h3
       css={css`
-        margin: 0.5rem 0;
-        font-size: 1rem;
+        margin: 0.3em 0;
         color: inherit;
       `}>
       <span css={css`color: #6c71c4;`}>{title}</span>
       <span
         css={css`
+          display: none;
           float: right;  
-          @media (max-width: 400px) {
-            background: black;
-            display: none;
+          @media (min-width: 380px) {
+            display: block;
           }  
         `}
       >
         {date}
       </span>
-    </h2>
+    </h3>
     <p
       css={css`
-        padding-left: 1rem;
-        height: 1rem;
+        margin: 0.3em 0;
+        padding-left: 0.5em;
         text-overflow: ellipsis;
       `}
     >

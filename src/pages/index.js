@@ -25,15 +25,17 @@ export default ({ data }) => (
       >
         <h3 css={css`
             margin: 0;
-            font-size: 1rem;
             color: inherit;
+            max-width: 100%
           `}
         >
           {`/** ${data.allMarkdownRemark.totalCount} posts`}
         </h3>
         <div css={css`
-            overflow-y: scroll;
-            max-height: 45vh;
+            margin: 0 auto;
+            width: 90%;
+            min-height: 30vh;
+            word-wrap: break-word;
           `}
         >
           {data.allMarkdownRemark.edges.map(({node}) => (
@@ -48,7 +50,6 @@ export default ({ data }) => (
         </div>
         <h3 css={css`
             margin: 0;
-            font-size: 1rem;
             color: inherit;
           `}
         >

@@ -1,9 +1,17 @@
-@import './code.scss';
+@import "./code.scss";
+@import "./typography.scss";
+
+html {
+  min-width: 320px;
+  width: 100%;
+}
 
 body {
   -webkit-text-size-adjust: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s, color 0.3s;
+  min-width: 320px;
+  width: 100%;
   color: #4c4b56;
 }
 
@@ -14,10 +22,4 @@ th, td {
 mark {
   padding: 0.2rem;
   background-color: #FFC300;
-}
-
-@media only screen and (max-width: 400) {
-  .omit {
-    display: none;
-  }
 }

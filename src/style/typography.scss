@@ -1,0 +1,36 @@
+html {
+  font-size: 14px;
+  line-height: 1rem;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+h2 {
+  font-size: 1.4em;
+}
+h1 {
+  font-size: 1.6em;
+}
+
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: calc( 1rem + 1.2vw - 5.5px);
+    line-height: 1.2rem;
+  }
+}
+@media only screen and (min-width: 700px) {
+  body {
+    font-size: 17px;
+    line-height: 1.3rem;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h1 {
+    font-size: 1.9em;
+  }
+}

@@ -6,8 +6,8 @@ export default ({size}) => (
     xlinkHref="http://www.w3.org/1999/xlink"
     aria-hidden="true"
     focusable="false"
-    width={`${size ? size : 1}rem`}
-    height={`${size ? size : 1}rem`}
+    width={`${size ? size + 0.2 : 1.2}em`}
+    height={`${size ? size + 0.2 : 1.2}em`}
     preserveAspectRatio="xMidYMid meet" 
     viewBox="0 0 512 512"
   >
