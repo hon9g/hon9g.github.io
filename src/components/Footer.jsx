@@ -1,14 +1,8 @@
 import React from "react"
 import { css, keyframes } from "@emotion/core"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
-import GitIcon from "./GitIcon"
 import HomeIcon from "./HomeIcon"
-import MailIcon from "./MailIcon"
-
-const userInfo = ['github', 'email']
-const icon = new Map([['home', <HomeIcon />], ['github', <GitIcon />], ['email', <MailIcon />]])
-const prefix = new Map([['github', 'https://github.com/'], ['email', 'mailto:']])
 
 const fadeIn = keyframes`
   0% {
@@ -55,44 +49,15 @@ const buttonStyle = css`
 `
 
 export default () => (
-  <StaticQuery
-    query={graphql`
-      query FooterQuery {
-        site {
-          siteMetadata {
-            user {
-              email
-              github
-            }
-          }
-        }
-      }
+  <footer
+    css={css`
+      width: 100%;
+      text-align: center;
     `}
-    render={({site: {siteMetadata: {user}}}) => (
-        <footer
-          css={css`
-            width: 100%;
-            text-align: center;
-          `}
-        > 
-          <div
-            css={css`
-              display: flex;
-              justify-content: center;
-            `}
-          >
-            <Link to={'/'} css={buttonStyle}>
-                <span role="img" aria-label="home icon">{icon.get('home')}</span>
-                <div>home</div>
-            </Link>
-            {userInfo.filter(e => user[e]).map((e, i) => (
-              <a key={i} href={`${prefix.get(e)}${user[e]}`} target="_blank" rel="noopener noreferrer" css={buttonStyle}>
-                <span role="img" aria-label={`${e} icon`}>{icon.get(e)}</span>
-                <div>{e}</div>
-              </a>
-            ))}
-          </div>
-        </footer>
-    )}
-  />
+  >
+    <Link to={'/'} css={buttonStyle}>
+        <HomeIcon />
+        <div>home</div>
+    </Link>
+  </footer>
 )
