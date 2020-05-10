@@ -7,6 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `hon9g blo9`,
+    utterancesRepo: `hon9g/blog`,
     user: {
       name: `hong`,
       photo: `jangmi.jpg`,
