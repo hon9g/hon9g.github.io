@@ -1,25 +1,25 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import Footer from './Footer'
+import Header from "./Header"
 
 export default ({children}) => (
   <div
     css={css`
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
+        margin: 0;
         height: 100vh;
-        max-width: 700px;
-        padding: 0 1em;
-        color: #4c4b56;
     `}
   >
-    <div css={css`flex-grow: 3;`}>
+    <Header />
+    <div
+      css={css`
+        margin: 0 auto;
+        padding: 0 1em;
+        max-width: 700px;
+        color: #4c4b56;
+      `}
+    >
       {children}
-    </div>
-    <div css={css`flex-grow: 1;`}>
-      <Footer />
     </div>
   </div>
 )

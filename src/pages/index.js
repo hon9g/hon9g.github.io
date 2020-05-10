@@ -24,7 +24,7 @@ export default ({ data }) => (
         `}
       >
         <h3 css={css`
-            margin: 0;
+            margin: 1em 0;
             color: inherit;
             max-width: 100%
           `}

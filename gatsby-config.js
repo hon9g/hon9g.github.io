@@ -6,11 +6,11 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Title from siteMetadata`,
+    title: `hon9g blo9`,
     user: {
       name: `hong`,
       photo: `jangmi.jpg`,
-      email: ``,
+      email: `mail.hon9g@gmail.com`,
       github: `hon9g`,
       location: `Seoul`,
       role: `Frontend Engineer`,
