@@ -11,11 +11,7 @@ export default ({ data }) => (
   <Layout>
     <div
       css={css`
-        display:flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        height: 100%;
+        min-height: 100%;
       `}
     >
       <About />
@@ -23,19 +19,8 @@ export default ({ data }) => (
           color: #4c4b56
         `}
       >
-        <h3 css={css`
-            margin: 1em 0;
-            color: inherit;
-            max-width: 100%
-          `}
-        >
-          {`/** ${data.allMarkdownRemark.totalCount} posts`}
-        </h3>
         <div css={css`
-            margin: 0 auto;
-            width: 90%;
-            min-height: 30vh;
-            word-wrap: break-word;
+            margin: .5em auto;
           `}
         >
           {data.allMarkdownRemark.edges.map(({node}) => (
@@ -48,13 +33,6 @@ export default ({ data }) => (
             />
           ))}
         </div>
-        <h3 css={css`
-            margin: 0;
-            color: inherit;
-          `}
-        >
-        {` */`}
-        </h3>
       </div>
     </div>
   </Layout>
@@ -70,10 +48,9 @@ query {
     edges {
         node {
           id
-          excerpt(pruneLength: 70)
+          excerpt(pruneLength: 130)
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
           }
           fields {
             slug

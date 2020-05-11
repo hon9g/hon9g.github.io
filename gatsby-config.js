@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `hon9g blo9`,
-    utterancesRepo: `hon9g/blog`,
+    utterancesRepo: `hon9g/hon9g.github.io`,
     user: {
       name: `hong`,
       photo: `jangmi.jpg`,
@@ -17,7 +17,6 @@ module.exports = {
       role: `Frontend Engineer`,
     },
   },
-  pathPrefix: `/blog`,
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
