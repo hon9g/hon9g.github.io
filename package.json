@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build --prefix-paths && gh-pages -d public",
+    "build": "gatsby build && gh-pages -d public -b master",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
@@ -38,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hon9g/blog"
+    "url": "https://github.com/hon9g/hon9g.github.io"
   },
   "bugs": {
-    "url": "https://github.com/hon9g/blog/issues"
+    "url": "https://github.com/hon9g/hon9g.github.io/issues"
   }
 }
