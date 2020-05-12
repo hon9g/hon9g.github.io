@@ -1,7 +1,10 @@
 ---
 date: "2020-04-24"
-title: "Styles of Mark down"
+title: "Quick check for Markdown Styles"
 ---
+
+This is to allow you quickly check the markdown style in this blog.
+It is based on the gatsby plugin `gatsby-transformer-remark` and `gatsby-remark-prismjs` with some customized style by `@hon9g`.
 
 ### text decorate
 - this is **strong**.
