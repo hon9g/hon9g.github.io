@@ -9,30 +9,25 @@ import PostLink from "../components/PostLink"
 
 export default ({ data }) => (
   <Layout>
-    <div
-      css={css`
-        min-height: 100%;
+    <About />
+    <div css={css`
+        color: #4c4b56
       `}
     >
-      <About />
       <div css={css`
-          color: #4c4b56
+          margin: .5em auto;
+          corlor: inherit;
         `}
       >
-        <div css={css`
-            margin: .5em auto;
-          `}
-        >
-          {data.allMarkdownRemark.edges.map(({node}) => (
-            <PostLink
-              key = {node.id}
-              slug={node.fields.slug}
-              title={node.frontmatter.title}
-              date={node.frontmatter.date}
-              excerpt={node.excerpt}
-            />
-          ))}
-        </div>
+        {data.allMarkdownRemark.edges.map(({node}) => (
+          <PostLink
+            key = {node.id}
+            slug={node.fields.slug}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            excerpt={node.excerpt}
+          />
+        ))}
       </div>
     </div>
   </Layout>
